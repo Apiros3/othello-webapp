@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E712ETDNTP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-E712ETDNTP');
+    </script>
+    <title>Othello AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+<body>
+    <script src="simulate.js"></script>
+    <script src="main.js"></script>
+
+    <!-- to draw board -->
+    <canvas id = "othello_board" width="440" height="440" style="border:2px solid black;"></canvas>
+    <script src="board.js"></script>
+
+    <!-- main calculations -->
+    <script src="ai.js"></script>
+
+    <br>
+    <!-- <button onclick="show()">Button</button> -->
+    <button onclick="start()" id="init_start">Start</button>
+    <button onclick="reverse_role()" id="init_rev">Switch</button><br>
+
+    Player is <span id = "player">Black</span><br>
+    Computer is <span id = "computer">White</span><br>
+    Stones: Player: <span id="player_stone">2</span>, Computer: <span id="computer_stone">2</span><br>
+    <div class="slidecontainer">
+        Computer Strength: 
+        <input type="range" min="0" max="4" value="2" class="slider" id="init_range">
+    </div>
+    <span id ="win"></span><br>
+    <span id ="seq"><a>Tweet</a></span>
+    <script>
+        draw_board();
+    </script>
+
+</body>
+</html>
